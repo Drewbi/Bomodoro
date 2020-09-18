@@ -1,3 +1,14 @@
-body {
-    background-color: aliceblue;
+.container {
+    background-color: #eeffee;
+    min-height: 500px;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    padding: 10px;
+
 }

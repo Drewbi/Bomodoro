@@ -17,6 +17,9 @@
     ],
     "browser_action": {
         "default_popup": "popUp.html",
-        "default_title": "bombard"
+        "default_title": "bombard",
+        "default_icon": {
+            "16": "icons/icon16.png"
+        }
     }
 }
