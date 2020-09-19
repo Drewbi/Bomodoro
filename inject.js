@@ -70,9 +70,7 @@ function cleanupBomb() {
 }
 
 function submitGuess(color) {
-  console.log(color);
   chrome.runtime.sendMessage({type: "guess", color: color}, function(response) {
-    console.log(response.defused);
     if(response.defused) bombDefused()
     else if(!response.defused) bombTriggered()
   });
