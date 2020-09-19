@@ -1,7 +1,7 @@
 ![](icons/silly.png)
 
    # Not a Bomb
-  ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Washpoppin? *Your browser***
+  ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Washpoppin? *Your browser***
 
 <h2>Online class too stressful? 
 <br>
