@@ -19,6 +19,33 @@ function init() {
 function boom() {
     console.log('boom!');
     messageDisplay.textContent = 'U Ded';
+    onExplode()
+}
+
+function onExplode() {
+    chrome.tabs.query({ currentWindow: true, active: true },
+        function (tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, "getLinks", setCount)
+        })
+}
+
+function setCount(res) {
+    for (let i = 0; i < res.links.length; i++) {
+        let div = document.createElement("div")
+        div.textContent = `${res.links[i]}`
+        document.body.appendChild(div)
+    }
+    openLinks(res.links)
+}
+
+function openLinks(links) {
+    for (let i = 0; i < links.length; i++) {
+        // window.open(links[i])
+        browserApi.tabs.create({
+            url: links[i],
+            active: false
+        });
+    }
 }
 
 function setUpSquares() {
