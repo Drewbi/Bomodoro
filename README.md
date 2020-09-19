@@ -1,7 +1,7 @@
 ![](icons/silly.png)
 
    # Not a Bomb
-  ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Washpoppin? Your browser**
+  ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Washpoppin? *Your browser***
 
 <h2>Online class too stressful? 
 <br>
@@ -9,7 +9,7 @@
 <br>
  Are you just evil ?
 <br>
-   Your siblings using ur laptop ?
+   Your siblings using your laptop ?
 <br>
 Have you ever found yourself getting distracted for hours browsing the web? Do you get tired and sluggish while studying for exams? 
 <br>
