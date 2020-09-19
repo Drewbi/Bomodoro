@@ -79,7 +79,6 @@ function rgbToHex(r, g, b) {
 }
 
 function shuffle(array) {
-  console.log(array);
   let currentIndex = array.length;
   let temporaryValue = '';
   let randomIndex = 0
