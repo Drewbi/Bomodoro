@@ -10,24 +10,12 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="interface">
-            <h2>
-                <p id="colorDisplay">RGB</p>
-            </h2>
-            <button id="explode" class="btn btn-danger">Don't Click Me!</button>
-            <button class="btn btn-info" id="reset">New Colors</button>
-            <span id="message"></span>
-            
-            <div id="bomb-container">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                
-            </div>
+    <div class="bomb-container">
+        <div id="bomb-disabled">
+            <input type="checkbox" name="disabled">
+            <label for="disabled">Disable Bomb</label>
         </div>
     </div>
-    <script src="./bomb.js"></script>
     <script src="./popUp.js"></script>
 
 </body>

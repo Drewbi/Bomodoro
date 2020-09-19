@@ -1,6 +1,10 @@
 {
     "name": "Bomb Extension",
-    "permissions": ["storage", "activeTab"],
+    "permissions": [
+        "*://*/*",
+        "storage",
+        "activeTab"
+    ],
     "manifest_version": 2,
     "version": "0.1.0",
     "background": {
@@ -16,7 +20,7 @@
                 "content.js"
             ],
             "css": [
-                "styles.css"
+                "inject.css"
             ]
         }
     ],

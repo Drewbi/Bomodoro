@@ -1,97 +1,15 @@
-.container {
+.bomb-container {
     background-color: #2e2e2e;
-    min-height: 500px;
-    min-width: 500px;
+    min-height: 300px;
+    min-width: 200px;
     display: flex;
     justify-content: center;
-    
-    background-image: url('./dynamite.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    color: white;
+    padding-top: 40px;
 }
 
-.interface {
+#bomb-disabled {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn {
-    position: relative;
-    padding: 10px;
-}
-
-.wrapper {
-    /* height: 700px;
-    width: 700px; */
-    margin-top: 20px;
-    height: 60vh;
-    width: 50vw;
-}
-
-h2 {
+    flex-direction: row;
     text-align: center;
-    font-weight: normal;
-    line-height: 1.5;
-    color: #222;
-    margin: 0;
-    padding: 20px 0;
 }
-
-button {
-    border: none;
-    background: none;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
-    height: 40px;
-    font-weight: 700;
-    color: blue;
-    letter-spacing: 1px;
-    font-size: 30px;
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    outline: none;
-}
-
-
-.square {
-    height: 50px;
-    width: 50px;
-    background-color: purple;
-    padding-bottom: 30%;
-    float: left;
-    margin: 1.66%;
-    border-radius: 15%;
-    transition: background 0.6s;
-    -webkit-transition: background 0.6s;
-    /* -moz-transition: background 0.6s; */
-    cursor: pointer;
-}
-
-
-#bomb-container {
-    display: flex;
-}
-
-#colorDisplay {
-    color: #e3e3e3;
-    text-shadow: 0px 0px 4px #000000;
-    font-size: 30px;
-}
-
-#stripe {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 50px;
-}
-
-#message {
-    color: #e3e3e3;
-    text-shadow: 0px 0px 4px #000000;
-    font-size: 30px;
-}
-
-/* BOOM!!!! */

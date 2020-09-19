@@ -1,4 +1,3 @@
-console.log('Bomb has been Injected')
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (message == 'getLinks'){
         var links = document.links
