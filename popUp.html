@@ -11,9 +11,23 @@
 
 <body>
     <div class="container">
-        <button class="btn btn-danger">Click Me!</button>
+        <div class="interface">
+            <h2>
+                <span id="colorDisplay">RGB</span>
+            </h2>
+            <button id="explode" class="btn btn-danger">Click Me!</button>
+            <button class="btn btn-danger" id="reset">New Colors</button>
+            <span id="message"></span>
+            
+            <div id="bomb-container">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                
+            </div>
+        </div>
     </div>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./bomb.js"></script>
     <script src="./popUp.js"></script>
 
 </body>

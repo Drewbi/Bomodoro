@@ -1,7 +1,7 @@
 var numSquares = 3;
 var colors = [];
 var pickedColor;
-var squares = document.querySelectorAll(".square");
+var squares = document.getElementsByClassName("square");
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.getElementById("message");
 var h2 = document.querySelector("h2");
@@ -16,34 +16,21 @@ function init() {
     reset();
 }
 
-// ADDED BOOM
 function boom() {
     console.log('boom!');
-    window.setTimeout(function () {
-        var imgTag = document.createElement("iframe");
-        imgTag.setAttribute("src", "https://giphy.com/embed/XUFPGrX5Zis6Y")
-        imgTag.setAttribute("width", "700")
-        imgTag.setAttribute("height", "700")
-        imgTag.setAttribute("frameBorder", "0")
-        document.body.appendChild(imgTag)
-        document.querySelector(".wrapper").remove();
-    }, 1000);
+    messageDisplay.textContent = 'U Ded';
 }
-
-// /ENDING OF BOOM
 
 function setUpSquares() {
     for (var i = 0; i < squares.length; i++) {
         squares[i].addEventListener("click", function () {
             var clickedColor = this.style.backgroundColor;
             if (clickedColor === pickedColor) {
-                messageDisplay.textContent = '" Correct !"';
+                messageDisplay.textContent = 'Correct !';
                 resetButton.textContent = "Play Again?";
                 changeColors(clickedColor);
-                h2.style.backgroundColor = clickedColor;
             } else {
-                this.style.backgroundColor = "#232323";
-                messageDisplay.textContent = '" Oh no! Watch out "';
+                messageDisplay.textContent = 'Oh no! Watch out';
                 boom();
             }
         });
@@ -88,9 +75,8 @@ function reset() {
             squares[i].style.display = "none";
         }
     }
-    h2.style.backgroundColor = "#ffeaa7";
     resetButton.textContent = "New Colors";
-    messageDisplay.textContent = '" Give it a shot "';
+    messageDisplay.textContent = 'Guess the color';
 }
 
 resetButton.addEventListener("click", function () {
