@@ -1,11 +1,19 @@
+body {
+    font-family: "Hi Melody";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: url("./icons/brickBg.png");
+    cursor: url("./icons/scissor.png"), auto;
+}
+
 .container {
-    background-color: #2e2e2e;
     min-height: 500px;
     min-width: 500px;
     display: flex;
     justify-content: center;
-    
-    background-image: url('./dynamite.png');
+
+    background-image: url('./icons/icon16.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -19,6 +27,7 @@
 
 .btn {
     position: relative;
+    top: 3px;
     padding: 10px;
 }
 
@@ -40,46 +49,81 @@ h2 {
 }
 
 button {
+
+    height: 30px;
+    width: 210px;
+    font-family: monospace;
+    border-radius: 3px;
+    background: #e0e5ec;
+    display: flex;
     border: none;
-    background: none;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
-    height: 40px;
-    font-weight: 700;
-    color: blue;
-    letter-spacing: 1px;
-    font-size: 30px;
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    outline: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    box-shadow:
+        inset 2px 2px 2px 0px rgba(255, 255, 255, .3),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: box-shadow 0.3s cubic-bezier(.79, .21, .06, .81);
+    /* font-size: 80px; */
+    color: #fff;
+    text-decoration: none;
+}
+
+button:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+        -4px -4px 6px 0 rgba(116, 125, 136, .2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
 
 
+
 .square {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 20px;
     background-color: purple;
-    padding-bottom: 30%;
-    float: left;
-    margin: 1.66%;
+    /* padding-bottom: 30%; */
+    /* margin: 1.66%; */
+    margin-top: 5px;
     border-radius: 15%;
     transition: background 0.6s;
     -webkit-transition: background 0.6s;
-    /* -moz-transition: background 0.6s; */
-    cursor: pointer;
+    -moz-transition: background 0.6s;
+    border-radius: 50px/25px;
+
+}
+
+.square {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.square:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 
 #bomb-container {
+
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #a8a2a2 74%);
+    height: 110px;
+    width: 210px;
+    border-radius: 5px;
     display: flex;
+    justify-content: space-evenly;
 }
 
 #colorDisplay {
-    color: #e3e3e3;
-    text-shadow: 0px 0px 4px #000000;
-    font-size: 30px;
+    color: #222222;
+    margin-top: 15px;
+    font-size: 12px;
+    margin-bottom: 30px;
 }
+
 
 #stripe {
     display: flex;
@@ -91,7 +135,14 @@ button {
 #message {
     color: #e3e3e3;
     text-shadow: 0px 0px 4px #000000;
-    font-size: 30px;
+    font-size: 28px;
+    margin-top: 2px;
+
 }
 
 /* BOOM!!!! */
+#game {
+    margin: 0 auto;
+    max-height: 568px;
+    max-width: 320px;
+}

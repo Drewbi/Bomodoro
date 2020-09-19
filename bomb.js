@@ -18,7 +18,7 @@ function init() {
 
 function boom() {
     console.log('boom!');
-    messageDisplay.textContent = 'U Ded';
+    messageDisplay.textContent = 'Oh no! Watch out';
     onExplode()
 }
 
@@ -57,7 +57,6 @@ function setUpSquares() {
                 resetButton.textContent = "Play Again?";
                 changeColors(clickedColor);
             } else {
-                messageDisplay.textContent = 'Oh no! Watch out';
                 boom();
             }
         });
@@ -103,7 +102,7 @@ function reset() {
         }
     }
     resetButton.textContent = "New Colors";
-    messageDisplay.textContent = 'Guess the color';
+    messageDisplay.textContent = 'Guess a wire to cut';
 }
 
 resetButton.addEventListener("click", function () {
