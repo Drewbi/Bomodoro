@@ -1,6 +1,6 @@
 chrome.runtime.onInstalled.addListener(function() {
 
-  chrome.storage.local.set({disabled: false, chance: 1, isPlanted: false, correct: '', hex: '', colors: []}, function() {
+  chrome.storage.local.set({disabled: false, chance: 10, isPlanted: false, correct: '', hex: '', colors: []}, function() {
     console.log("Background initialised");
   });
 
