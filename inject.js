@@ -70,7 +70,9 @@ function cleanupBomb() {
 }
 
 function submitGuess(color) {
-  chrome.runtime.sendMessage({type: "guess", color: color}, function(response) {
+  const port = chrome.runtime.connect({name: "defusalPort"});
+  port.postMessage({type: "guess", color: color});
+  port.onMessage.addListener(function(response) {
     if(response.defused) bombDefused()
     else if(!response.defused) bombTriggered()
   });

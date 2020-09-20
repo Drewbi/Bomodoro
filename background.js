@@ -10,8 +10,9 @@ chrome.runtime.onInstalled.addListener(function() {
           if(Math.random() * result.chance < 1 && !result.isPlanted) {
             console.log('Planting')
             const correctColor = randomColor()
-            const colArray = [0,0,0,0].map(() => `rgb(${randomColor()})`)
+            const colArray = [0, 0, 0, 0].map(() => `rgb(${randomColor()})`)
             colArray.push(`rgb(${correctColor})`)
+            console.log(`rgb(${correctColor})`);
             const colors = shuffle(colArray)
             chrome.storage.local.set({
               isPlanted: true,
@@ -43,23 +44,36 @@ chrome.runtime.onInstalled.addListener(function() {
           });
         }
       });
-      chrome.storage.local.get(['correct'], function(result) {
-        chrome.runtime.onMessage.addListener(
-          function(request, sender, sendResponse) {
-            if (request.type === "guess" && result.correct !== '') {
-              const defused = request.color === `rgb(${result.correct})`
-              sendResponse({defused});
-              if(!defused) boom()
-              chrome.storage.local.set({
-                isPlanted: false,
-                correct: 'correctColor',
-                hex: '',
-                colors: []
-              })
-            }
-          });
-      });
     })
+  });
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.runtime.onConnect.addListener(function(port) {
+    port.onMessage.addListener(function(request) {
+      chrome.storage.local.get(['correct'], function(result) {
+        console.log(JSON.stringify(result));
+        console.log(JSON.stringify(request));
+        console.log(`rgb(${result.correct})`);
+        console.log(request.color);
+        if (request.type === "guess" && result.correct !== '') {
+          console.log('Evaluating Guess');
+          console.log(request.color === `rgb(${result.correct})`);
+          const defused = request.color === `rgb(${result.correct})`
+          console.log('isDefused1 ' + defused);
+          port.postMessage({defused});
+          setTimeout(function () {
+            console.log('isDefused2 ' + defused);
+            if(!defused) boom()
+            chrome.storage.local.set({
+              isPlanted: false,
+              correct: '',
+              hex: '',
+              colors: []
+            }, function() { console.log('Resetting') })
+          }, 1000)
+        }
+      });
+    });
+  })
 });
 
 function randomColor() {
