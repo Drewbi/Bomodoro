@@ -1,6 +1,6 @@
 .bomb-container {
     background-color: #2e2e2e;
-    min-height: 300px;
+    min-height: 100px;
     min-width: 200px;
     display: flex;
     justify-content: center;
