@@ -17,12 +17,11 @@ Have you ever found yourself getting distracted for hours browsing the web? Do y
  <h1>
 # Nows the time to Blast it up!
 </h1>
-(gif)
+
 
 # Features
 * Burts off the links in your browser better than Elon's Rockets
 * Set off Timer
 * New puzzles every week
 
-# Installation
 
